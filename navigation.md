@@ -52,6 +52,7 @@ HTML Boilerplate:
 The ```<!DOCTYPE html>``` declaration defines the document type and version of HTML.
 The ```<html>``` element is the root element of the document.
 The ```<head>``` element contains meta-information about the document, such as character set and viewport settings.
+
 ```<link rel="stylesheet" href="styles.css">``` links an external CSS file for styling the page.
 Navigation Bar (```<nav>```):
 
