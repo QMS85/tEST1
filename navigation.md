@@ -2,7 +2,7 @@ Responsive Navigation Menu
 
 Step-by-Step Instructions and Explanations
 1. HTML Structure of the Navigation Bar
-The HTML file includes a navigation bar (<nav>) with a logo, navigation links, and a menu toggle button for mobile view.
+The HTML file includes a navigation bar (```<nav>```) with a logo, navigation links, and a menu toggle button for mobile view.
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +65,7 @@ Navigation Links:
 
 ```<ul class="nav-links">``` contains the navigation links.
 Each ```<li>``` element represents a navigation item linking to different pages (```index.html, Investment-Plans.html```, etc.).
+
 Menu Toggle Button:
 
 ```<button class="menu-toggle" aria-label="Toggle navigation">``` is a button for toggling the navigation menu in mobile view.
@@ -107,7 +108,7 @@ CSS:
 }
 ```         
 
-Universal Selector ```(*)```: Resets ```margin``` and ```padding``` for all elements to ensure consistent spacing. ```box-sizing: border-box``` ensures that ```padding``` and ```border``` are included in the element's total width and height. 
+Universal Selector ```(*)```: Resets ```margin``` and ```padding``` for all elements to ensure consistent spacing. ```box-sizing: border-box``` ensures that ```padding``` and ```border``` are included in the element's total ```width and height```. 
 The ```font-family``` is set to ```'Segoe UI'```.
 
 CSS:
@@ -239,7 +240,7 @@ CSS:
     transform-origin: center;
 }
 ```
-```.hamburger```: Styles the hamburger bars inside the menu toggle button.
+```.hamburger```: Styles the hamburger bars inside the ```menu toggle``` button.
 
 CSS:
 ```
@@ -272,7 +273,7 @@ CSS:
     display: block;
 }
 ```
-```.mobile-menu```: Styles the mobile menu, initially hidden and displayed when active.
+```.mobile-menu```: Styles the mobile menu, initially hidden and displayed when ```active```.
 
 CSS
 ```
@@ -317,7 +318,7 @@ CSS:
 }
 ```
 
-```.cta-button```: Styles the call-to-action button and adds a hover effect.
+```.cta-button```: Styles the ```call-to-action button``` and adds a ```hover``` effect.
 
 CSS:
 ```
@@ -338,15 +339,16 @@ CSS:
 }
 ```
 
-Media Queries: Adjusts the display of navigation elements based on screen width. 
-Hides the desktop navigation links and displays the menu toggle button on screens smaller than 768px. Hides the mobile menu on screens larger than 768px.
+Media Queries: Adjusts the display of navigation elements based on ```screen width```. 
+Hides the desktop navigation links and displays the ```menu toggle button``` on screens smaller than ```768px```. Hides the ```mobile menu``` on screens larger than ```768px```.
 
 Next, we will look at the JavaScript code for the responsive navigation bar.
 
 Step-by-Step Instructions and Explanations:
 
 3. JavaScript code for the Responsive Navigation Bar
-The JavaScript file (script.js) enhances the interactivity of the navigation bar, making it responsive to user actions and screen size changes.
+
+The JavaScript file (```script.js```) enhances the interactivity of the navigation bar, making it responsive to user actions and screen size changes.
 
 JavaScript:
 
@@ -402,6 +404,7 @@ JavaScript
  ```
  
 Close menu when clicking outside: Adds a click event listener to the entire document. 
+
 If the user clicks outside the navigation container and the mobile menu is active, it removes the active class from both the menu toggle button and the mobile menu, hiding the menu.
 
 JavaScript:
