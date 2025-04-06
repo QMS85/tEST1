@@ -49,14 +49,14 @@ The HTML file includes a navigation bar (<nav>) with a logo, navigation links, a
 Explanation:
 HTML Boilerplate:
 
-The <sub><!DOCTYPE html></sub> declaration defines the document type and version of HTML.
-The <html> element is the root element of the document.
-The <head> element contains meta-information about the document, such as character set and viewport settings.
+The ```<!DOCTYPE html>``` declaration defines the document type and version of HTML.
+The ```<html>``` element is the root element of the document.
+The ```<head>``` element contains meta-information about the document, such as character set and viewport settings.
 ```<link rel="stylesheet" href="styles.css">``` links an external CSS file for styling the page.
-Navigation Bar (<nav>):
+Navigation Bar (```<nav>```):
 
-The <sub><nav></sub> element contains the navigation bar.
-Inside the <nav>, there is a div with the class nav-container that wraps the navigation content.
+The ```<nav>``` element contains the navigation bar.
+Inside the ```<nav>```, there is a ```<div>``` with the ```class="nav-container"``` that wraps the navigation content.
 Logo:
 
 ```<a href="#" class="logo">GKroon Crypto Invest</a>``` is a link styled as a logo.
@@ -64,21 +64,22 @@ Logo:
 Navigation Links:
 
 ```<ul class="nav-links">``` contains the navigation links.
-Each <li> element represents a navigation item linking to different pages (index.html, Investment-Plans.html, etc.).
+Each ```<li>``` element represents a navigation item linking to different pages (```index.html, Investment-Plans.html```, etc.).
 Menu Toggle Button:
 
 ```<button class="menu-toggle" aria-label="Toggle navigation">``` is a button for toggling the navigation menu in mobile view.
 The button contains three ```<span class="hamburger">``` elements styled as hamburger bars.
+
 Mobile Menu:
 
 ```<div class="mobile-menu">``` is a container for the mobile version of the navigation menu.
 Contains a ```<ul>``` with the same links as in the desktop navigation.
+
 External JavaScript:
 
 ```<script src="script.js"></script>``` links an external JavaScript file for interactive functionalities.
 
 
-Step-by-Step Instructions and Explanations
 2. CSS for Responsive Navigation Bar
 
 The CSS file styles the navigation bar, making it responsive for different screen sizes.
@@ -92,7 +93,7 @@ CSS:
     --transition-speed: 0.3s;
 }
 ```
-```:root```: This defines CSS variables for primary color, accent color, text color, and transition speed. 
+```:root```: This defines CSS variables for ```primary color, accent color, text color,``` and ```transition speed```. 
 Using these variables makes it easier to manage and update color schemes and transitions across the entire stylesheet.
 
 CSS:
@@ -106,7 +107,7 @@ CSS:
 }
 ```         
 
-Universal Selector ```(*)```: Resets ```margin``` and ```padding``` for all elements to ensure consistent spacing. ```box-sizing: border-box``` ensures that padding and border are included in the element's total width and height. 
+Universal Selector ```(*)```: Resets ```margin``` and ```padding``` for all elements to ensure consistent spacing. ```box-sizing: border-box``` ensures that ```padding``` and ```border``` are included in the element's total width and height. 
 The ```font-family``` is set to ```'Segoe UI'```.
 
 CSS:
@@ -122,8 +123,8 @@ nav {
     z-index: 1000;
 }    
 ```
-```nav```: Sets the background color using the primary color variable, adds padding, and applies a slight shadow for depth. 
-The navigation bar is fixed at the top of the page and spans the full width. ```z-index: 1000``` ensures it stays on top of other content. 
+```nav```: Sets the ```background color``` using the ```primary color variable```, adds ```padding```, and applies a slight ```shadow``` for depth. 
+The navigation bar is fixed at the top of the page and spans the full ```width```. ```z-index: 1000``` ensures it stays on top of other content. 
 
 CSS:
 ```
@@ -356,11 +357,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.querySelector('.mobile-menu');
     const hamburgers = document.querySelectorAll('.hamburger');       ``` 
 
+````
+```DOMContentLoaded event:```
 
-DOMContentLoaded event:
+
 
 Ensures the script runs after the HTML document has been completely loaded and parsed.
-````
+
 ```menuToggle:```
 
 Selects the menu toggle button.
