@@ -35,6 +35,69 @@
             <li><a href="Signup-Login.html">Sign Up & Login</a></li>
         </ul>
     </div>
+
+    <div class="form-container">
+        <div class="form-tabs">
+            <button class="tab-btn active" data-form="signup">Sign Up</button>
+            <button class="tab-btn" data-form="login">Login</button>
+        </div>
+
+        <form id="signup-form" class="auth-form active">
+            <h2>Create Account</h2>
+            <div class="form-group">
+                <input type="text" id="fullname" name="fullname" required pattern="^[a-zA-Z\s]{2,}$">
+                <label for="fullname">Full Name</label>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email Address</label>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <!-- Countries will be populated via JavaScript -->
+                </select>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" id="phone" name="phone" required pattern="^\+?[1-9]\d{1,14}$">
+                <label for="phone">WhatsApp/Phone Number</label>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="password" name="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                <label for="password">Password</label>
+                <span class="error-message"></span>
+            </div>
+
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+
+        <form id="login-form" class="auth-form">
+            <h2>Welcome Back</h2>
+            <div class="form-group">
+                <input type="email" id="login-email" name="email" required>
+                <label for="login-email">Email Address</label>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="login-password" name="password" required>
+                <label for="login-password">Password</label>
+                <span class="error-message"></span>
+            </div>
+
+            <button type="submit" class="submit-btn">Login</button>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+        </form>
+    </div>
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-social">
