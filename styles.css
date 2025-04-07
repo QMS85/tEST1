@@ -228,7 +228,7 @@ nav {
     content: '';
     position: absolute;
     width: 0;
-    height: 0
+    height: 2px; /* Changed from 0 and added missing semicolon */
     background: var(--accent-color);
     bottom: 0;
     left: 0;
