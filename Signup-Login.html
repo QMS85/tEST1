@@ -42,7 +42,7 @@
             <button class="tab-btn" data-form="login">Login</button>
         </div>
 
-        <form id="signup-form" class="auth-form active">
+        <form id="signup-form" class="auth-form active" onsubmit="return handleSignup(event)">
             <h2>Create Account</h2>
             <div class="form-group">
                 <input type="text" id="fullname" name="fullname" required pattern="^[a-zA-Z\s]{2,}$">
@@ -79,7 +79,7 @@
             <button type="submit" class="submit-btn">Sign Up</button>
         </form>
 
-        <form id="login-form" class="auth-form">
+        <form id="login-form" class="auth-form" onsubmit="return handleLogin(event)">
             <h2>Welcome Back</h2>
             <div class="form-group">
                 <input type="email" id="login-email" name="email" required>
