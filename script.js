@@ -236,3 +236,12 @@ document.addEventListener('DOMContentLoaded', () => {
         handleFooterVisibility();
     }
 });
+
+// INVEST PLAN BUTTON REDIRECTS //
+document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const url = button.getAttribute('data-url');
+                window.location.href = url;
+            });
+        });
+//END OF INVESTMENT PLAN BUTTON REDIRECTS//
