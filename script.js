@@ -247,40 +247,36 @@ document.querySelectorAll('.cta-button').forEach(button => {
 //END OF INVESTMENT PLAN BUTTON REDIRECTS//
 
 
-//START OF QR CODE JAVASCRIPT - PAYMENTS.HTML PAGE//
- window.onload = function() {
-            // Payment details
-            const recipientAddress = 'TPwAC3Zjr4YWNHybnB9Q6MMFQWyM5zB88M';
-            const contractAddress = 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t'; // USDT TRC20 contract address
-            
-            // Construct TRON URI (TIP-13 standard)
-            const tronURI = `tron:${recipientAddress}?contract=${contractAddress}&token=USDT`;
-            
-            // Generate QR Code
-            new QRCode(document.getElementById('qrcode'), {
-                text: tronURI,
-                width: 256,
-                height: 256,
-                colorDark: "#000000",
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H
-            });
-        };
-//END OF QR CODE JAVASCRIPT - PAYMENTS.HTML PAGE//
+// JavaScript for QR Code and Copy Functionality
+document.addEventListener("DOMContentLoaded", function () {
+    // Generate QR Code
+    const qrCodeContainer = document.getElementById("qrcode");
+    const walletAddress = "TPwAC3Zjr4YWNHybnB9Q6MMFQWyM5zB88M";
+    const qrCode = new QRCode(qrCodeContainer, {
+        text: walletAddress,
+        width: 150,
+        height: 150,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
 
-//COPY BUTTON JAVASCRIPT CODE//
-document.getElementById("copyButton").addEventListener("click", function () {
-    const walletAddress = document.getElementById("walletAddress").innerText;
+    // Copy Wallet Address to Clipboard
+    const copyButton = document.getElementById("copyButton");
+    const copySuccess = document.getElementById("copySuccess");
 
-    navigator.clipboard.writeText(walletAddress).then(() => {
-        const successMessage = document.getElementById("copySuccess");
-        successMessage.style.display = "block";
+    copyButton.addEventListener("click", function () {
+        navigator.clipboard.writeText(walletAddress).then(() => {
+            // Show success message
+            copySuccess.style.display = "block";
 
-        setTimeout(() => {
-            successMessage.style.display = "none";
-        }, 2000);
-    }).catch(err => {
-        console.error("Failed to copy text: ", err);
+            // Hide success message after 2 seconds
+            setTimeout(() => {
+                copySuccess.style.display = "none";
+            }, 2000);
+        }).catch(err => {
+            console.error("Failed to copy wallet address: ", err);
+        });
     });
 });
-//END OF COPY BUTTON JAVASCRIPT CODE//
+
