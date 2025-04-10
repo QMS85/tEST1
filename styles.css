@@ -505,30 +505,7 @@ nav {
     text-decoration: none;
 }
 
-.copy-btn {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s;
-}
 
-.copy-btn:hover {
-    background-color: #0056b3;
-}
-
-.copy-success {
-    color: green;
-    font-size: 14px;
-    margin-top: 10px;
-    display: block;
-    text-align: center;
-}.cta-button:hover {
-    background-color: #218838;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -540,3 +517,31 @@ nav {
 /* END OF FLIPCARD CSS */
 
 
+.qrcode {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy-btn {
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color var(--transition-speed);
+}
+
+.copy-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.copy-success {
+    color: var(--accent-color);
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
