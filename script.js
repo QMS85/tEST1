@@ -267,3 +267,20 @@ document.querySelectorAll('.cta-button').forEach(button => {
             });
         };
 //END OF QR CODE JAVASCRIPT - PAYMENTS.HTML PAGE//
+
+//COPY BUTTON JAVASCRIPT CODE//
+document.getElementById("copyButton").addEventListener("click", function () {
+    const walletAddress = document.getElementById("walletAddress").innerText;
+
+    navigator.clipboard.writeText(walletAddress).then(() => {
+        const successMessage = document.getElementById("copySuccess");
+        successMessage.style.display = "block";
+
+        setTimeout(() => {
+            successMessage.style.display = "none";
+        }, 2000);
+    }).catch(err => {
+        console.error("Failed to copy text: ", err);
+    });
+});
+//END OF COPY BUTTON JAVASCRIPT CODE//
