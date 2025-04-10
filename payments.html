@@ -40,13 +40,15 @@
   
 </head>
 <body>
-    <div class="container">
-        <h2>USDT (TRC20) Payment QR Code</h2>
-        <div class="info">
-            <p><strong>Network:</strong> TRON (TRC20)</p>
-            <p><strong>Wallet Address:</strong> TPwAC3Zjr4YWNHybnB9Q6MMFQWyM5zB88M</p>
-        </div>
-        <div id="qrcode"></div>
+   <div class="info">
+    <p><strong>Network:</strong> TRON (TRC20)</p>
+    <p>
+        <strong>Wallet Address:</strong> 
+        <span id="walletAddress">TPwAC3Zjr4YWNHybnB9Q6MMFQWyM5zB88M</span>
+        <button id="copyButton" class="copy-btn">Copy</button>
+    </p>
+</div>
+<div id="copySuccess" class="copy-success" style="display: none;">Wallet address copied!</div>
     
         <h3>Payment Instructions</h3>
         <p>1. Go To Your Wallet & Select Tether/USDT (TRC20).</p>
