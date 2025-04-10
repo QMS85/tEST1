@@ -245,3 +245,25 @@ document.querySelectorAll('.cta-button').forEach(button => {
             });
         });
 //END OF INVESTMENT PLAN BUTTON REDIRECTS//
+
+
+//START OF QR CODE JAVASCRIPT - PAYMENTS.HTML PAGE//
+ window.onload = function() {
+            // Payment details
+            const recipientAddress = 'TPwAC3Zjr4YWNHybnB9Q6MMFQWyM5zB88M';
+            const contractAddress = 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t'; // USDT TRC20 contract address
+            
+            // Construct TRON URI (TIP-13 standard)
+            const tronURI = `tron:${recipientAddress}?contract=${contractAddress}&token=USDT`;
+            
+            // Generate QR Code
+            new QRCode(document.getElementById('qrcode'), {
+                text: tronURI,
+                width: 256,
+                height: 256,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        };
+//END OF QR CODE JAVASCRIPT - PAYMENTS.HTML PAGE//
