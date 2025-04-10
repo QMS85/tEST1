@@ -7,25 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
      <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-     <style>
-        .container {
-            text-align: center;
-            margin: 50px auto;
-            max-width: 600px;
-        }
-        #qrcode {
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            display: inline-block;
-        }
-        .info {
-            margin: 20px;
-            padding: 15px;
-            background: #f0f8ff;
-            border-radius: 8px;
-        }
-    </style>
+    
 </head>
 <body>
     <nav>
@@ -68,25 +50,13 @@
         <div id="qrcode"></div>
     </div>
     </main>
-    <script>
-        window.onload = function() {
-            // Payment details
-            const recipientAddress = 'TPwAC3Zjr4YWNHybnB9Q6MMFQWyM5zB88M';
-            const contractAddress = 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t'; // USDT TRC20 contract address
-            
-            // Construct TRON URI (TIP-13 standard)
-            const tronURI = `tron:${recipientAddress}?contract=${contractAddress}&token=USDT`;
-            
-            // Generate QR Code
-            new QRCode(document.getElementById('qrcode'), {
-                text: tronURI,
-                width: 256,
-                height: 256,
-                colorDark: "#000000",
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H
-            });
-        };
-    </script>
+    <section>
+        <h3>Payment Instructions</h3>
+        <p>1. Go To Your Wallet & Select Tether/USDT (TRC20).</p>
+        <p>2. Make Sure To Select TRON Network For TRC20 Payments. Incorrect Network Selection Will Result In Loss Of Funds, That Will Not Be Recovered</p>
+        <p>3. Copy/Enter The Wallet Address: TPwAC3Zjr4YWNHybnB9Q6MMFQWyM5zB88M To Make Payment. Ensure That The Wallet Address Is 100% Correct. </p>
+        <p>4. Enter The Required Amount: $30, $100 or $200, Depending On Your Investment Plan. & Send/Withdraw</p>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
